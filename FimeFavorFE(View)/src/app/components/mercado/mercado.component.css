@@ -1,0 +1,24 @@
+.right {
+    margin-left: 65%;
+    margin-right: 0%;
+}
+
+.alinear {
+    display: block;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 30%;
+}
+
+.centro {
+    text-align: center;
+}
+
+.centrar {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.derecha {
+    margin-left: 95%;
+}

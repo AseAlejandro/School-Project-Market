@@ -1,0 +1,97 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <img src="/assets/img/FIME-FAVOR.png" width="125" height="125" class="left" routerLink="/seleccion">
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-4">
+            <p></p>
+            <p></p>
+            <input type="text" id="searchString" name="searchString" [(ngModel)]="searchText" 
+            class="form-control" placeholder="Buscar producto">
+            <p></p>
+            <button class="btn btn-primary alinear" type="button" (click)="search()"> Buscar </button>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2">
+            <p></p>
+            <img src="/assets/img/user.png" width="70" height="70" routerLink="/seleccion">
+        </div>
+    </div>
+<p></p>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/inicioVendedor">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/productosVendedor">Mis productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addProducto">Añadir producto</a>
+        </li>
+      </ul>
+</div>
+<body class="centrar">
+<h1 class="visible-xs titulo">Numero de cotizacion: {{orden.id}}</h1>
+
+<p></p>
+<p></p>
+<p></p>
+<div>
+    <!--<p>Fecha: {{orden.fecha |  date : 'EEEE MMMM d y'}}</p>
+    <p>Fecha: {{orden.fecha |  date }}</p>-->
+    <p>Fecha: {{orden.fecha |  date : 'short'}}</p>
+    <!--<p>Fecha: {{orden.fecha |  date : 'long'}}</p>
+    <p>Fecha: {{orden.fecha |  date }}</p>-->
+</div>
+<table mat-table [dataSource]="Detalles" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="modelo">
+        <th mat-header-cell *matHeaderCellDef> Modelo </th>
+        <td mat-cell *matCellDef="let element"> {{element.modelo}} </td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef> Precio </th>
+        <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+      </ng-container>
+
+      
+      <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+      </ng-container>
+
+      
+      <ng-container matColumnDef="costoTotal">
+        <th mat-header-cell *matHeaderCellDef> CostoTotal </th>
+        <td mat-cell *matCellDef="let element"> {{element.costoTotal}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<p></p>
+<p></p>
+<div>
+    <h1 class="precio">Total: ${{orden.total}}</h1>
+</div>
+
+<footer>
+  <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>
+</body>

@@ -1,0 +1,60 @@
+<body>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<div class="row">
+    <div class="col-xs-6 col-sm-4 col-md-2">
+        <img src="/assets/img/FIME-FAVOR.png" width="125" height="125" class="left" routerLink="/seleccion">
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+        <p></p>
+        <img src="/assets/img/user.png" width="70" height="70" routerLink="/seleccion">
+    </div>
+</div>
+<h2 class="mitad">Añadir reseña</h2>
+<p></p>
+<p></p>
+<div class="alinear">
+<form [formGroup]="form" (ngSubmit)="guardar()">
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-archive"
+            [class.green-icon]="this.form.get('descripcion')?.valid"
+            [class.red-icon]="this.form.get('descripcion')?.invalid && this.form.get('descripcion')?.touched"></i>
+        </span>
+        <input formControlName="descripcion" type="string" class="form-control tablag" placeholder="Descripcion">
+    </div>
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-user"
+            [class.green-icon]="this.form.get('cuentaId')?.valid"
+            [class.red-icon]="this.form.get('cuentaId')?.invalid && this.form.get('cuentaId')?.touched"></i>
+        </span>
+        <input formControlName="cuentaId" type="number" class="form-control" placeholder="Id Cuenta">
+    </div>
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-at"
+            [class.green-icon]="this.form.get('calificacion')?.valid"
+            [class.red-icon]="this.form.get('calificacion')?.invalid && this.form.get('calificacion')?.touched"></i>
+        </span>
+        <input formControlName="calificacion" type="number" class="form-control" placeholder="Calificacion">
+    </div>
+
+
+    <div class="d-grid gap-2 botonmitad alinear">
+        <button type="submit button" class="btn btn-success btn-lg">
+            <i class="fas fa-database"></i>&nbsp; Aceptar</button>
+    </div>
+</form>
+
+</div>
+
+<footer>
+    <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>
+
+</body>

@@ -1,0 +1,47 @@
+.mitad{
+    align-content: center;
+    text-align: center;
+}
+
+.botonmitad{
+    width: 50%;
+    text-align: center;
+    align-content: center;
+}
+
+.alinear {
+    display: block;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.far {
+    cursor: pointer;
+    
+}
+
+.green-icon {
+    color: #198754
+}
+
+.red-icon {
+    color: #dc3545
+}
+
+.titulo {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.right {
+    margin-left: 82%;
+    margin-right: 0%;
+}
+
+.derecha {
+    margin-left: 95%;
+}
+
+
+

@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <img src="/assets/img/FIME-FAVOR.png" width="200" height="200" class="center">
+    </div>
+    <p></p>
+    <h2 class="mitad">Inicio de sesión</h2>
+    <p></p>
+<div class="alinear">
+    <!--Desconectado-->
+<form [formGroup]="form" (ngSubmit)="login()" >
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-at"
+            [class.green-icon]="this.form.get('correo')?.valid"
+            [class.red-icon]="this.form.get('correo')?.invalid && this.form.get('correo')?.touched"></i>
+        </span>
+        <input formControlName="correo" type="email" class="form-control" placeholder="Correo Electrónico">
+    </div>
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-key"
+            [class.green-icon]="this.form.get('contrasena')?.valid"
+            [class.red-icon]="this.form.get('contrasena')?.invalid && this.form.get('contrasena')?.touched"></i>
+        </span>
+        <input formControlName="contrasena" type="password" class="form-control" placeholder="Contraseña">
+    </div>
+
+    <!--<p class="azul">
+        <button routerLink="/add" class="btn btn-primary">¿Olvidaste tu contraseña?</button>
+    </p> -->
+
+
+    <div class="d-grid gap-2 botonmitad">
+        <button type="submit button" class="btn btn-success btn-lg" > <!--routerLink="/inicioVendedor"-->
+            <i class="fas fa-user"></i>&nbsp; Ingresar</button>
+    </div>
+    <p></p>
+    <div class="d-grid gap-2 botonmitad">
+        <button type="submit" class="btn btn-success btn-lg" routerLink="/seleccion"> <!--routerLink="/mercado-->
+            <i class="fas fa-arrow-right"></i>&nbsp; Continuar</button>
+    </div>
+    <p></p>
+    <p></p>
+    <p class="azul">
+        <button routerLink="/register" class="btn btn-primary">Crear Cuenta</button>
+    </p> 
+</form>
+    <!--Conectado-->
+    <!--<div *ngIf="isLoggedIn">
+        <h3>Bienvenido {{nombre}}</h3>
+        <div class="d-grid gap-2 botonmitad">
+            <button type="submit" class="btn btn-success btn-lg" routerLink="/inicioVendedor"> 
+                <i class="fas fa-money-bill-wave-alt"></i>&nbsp; Vendedor</button>
+        </div>
+        <div class="d-grid gap-2 botonmitad">
+            <button type="submit" class="btn btn-success btn-lg" routerLink="/mercado"> 
+                <i class="fas fa-shopping-cart"></i>&nbsp; Comprador</button>
+        </div>
+        <p></p>
+        <div class="d-grid gap-2 botonmitad">
+            <button type="submit" class="btn btn-success btn-lg" routerLink="/inicioRepartidor"> 
+                <i class="fas fa-truck"></i>&nbsp; Repartidor</button>
+        </div>
+        <p></p>
+        <p class="azul">
+            <button routerLink="/register" class="btn btn-primary">Cerrar sesión</button>
+        </p> 
+    </div>-->
+</div>
+</body>
+
+<footer>
+    <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>

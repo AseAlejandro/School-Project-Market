@@ -1,0 +1,90 @@
+.mat-table {
+    width: 95%;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .mat-column-nombre {
+    font-size: 20px;
+  }
+
+  .mat-column-modelo {
+    font-size: 20px;
+  }
+
+  .mat-column-descripcion {
+    font-size: 20px;
+  }
+
+  .mat-column-costoTotal {
+    font-size: 20px;
+  }
+
+  .mat-column-precio {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .mat-column-cantidad {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .mat-column-costoTotalItem {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .mat-table-sticky {
+    background: #2c76c0;
+    opacity: 1;
+    box-sizing: border-box;
+  }
+
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+
+  tr.example-detail-row {
+    height: 0;
+  }
+
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+
+  .example-element-description {
+    padding: 16px;
+  }
+
+  .form-control {
+    width: 20%;
+  }
+
+  .titulo {
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  .precio{
+      font-size: 35px;
+      text-align: right;
+  }
+
+  .derecha {
+    margin-left: 95%;
+}
+
+.centrar {
+  margin-left: 2%;
+  margin-right: 2%;
+}

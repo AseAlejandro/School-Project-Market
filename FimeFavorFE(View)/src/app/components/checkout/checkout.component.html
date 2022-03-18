@@ -1,0 +1,102 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <img src="/assets/img/FIME-FAVOR.png" width="125" height="125" class="left" routerLink="/seleccion">
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-4">
+            <p></p>
+            <p></p>
+            <input type="text" id="searchString" name="searchString" [(ngModel)]="searchText" 
+            class="form-control" placeholder="Buscar producto">
+            <p></p>
+            <button class="btn btn-primary alinear" type="button" (click)="search()"> Buscar </button>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <p></p>
+            <img src="/assets/img/mochila.png" width="70" height="70" routerLink="/mochila">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <p></p>
+            <img src="/assets/img/user.png" width="70" height="70" routerLink="/seleccion">
+        </div>
+    </div>
+<p></p>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="mercado">Productos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categorias</a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let categoria of categorias"><a class="dropdown-item" [routerLink]="['/productos', categoria.id]">{{categoria.categoriaNombre}}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>-->
+      </ul>
+</div>
+<p></p>
+<div class="alinear">
+    <form [formGroup]="form" (ngSubmit)="cotizar()">
+        <div class="input-group input-group-lg mb-3 mitad">
+            <span class="input-group-text">
+                <i class="fas fa-folder"
+                [class.green-icon]="this.form.get('clienteId')?.valid"
+                [class.red-icon]="this.form.get('clienteId')?.invalid && this.form.get('clienteId')?.touched"></i>
+            </span>
+            <input formControlName="clienteId" type="number" class="form-control" placeholder="Id Cliente">
+        </div>
+    
+        <div class="input-group input-group-lg mb-3 mitad">
+            <span class="input-group-text">
+                <i class="fas fa-archive"
+                [class.green-icon]="this.form.get('lugarDeEntrega')?.valid"
+                [class.red-icon]="this.form.get('lugarDeEntrega')?.invalid && this.form.get('lugarDeEntrega')?.touched"></i>
+            </span>
+            <!--<input formControlName="lugarDeEntrega" type="text" class="form-control" placeholder="Lugar de Entrega">-->
+            <select id="lugarDeEntrega" formControlName="lugarDeEntrega">
+                <option *ngFor="let c of lugaresDeEntrega" [ngValue]="c.name">{{ c.name }}</option>
+            </select>
+        </div>
+    
+        <div class="input-group input-group-lg mb-3 mitad">
+            <span class="input-group-text">
+                <i class="fas fa-info-circle"
+                [class.green-icon]="this.form.get('comentarios')?.valid"
+                [class.red-icon]="this.form.get('comentarios')?.invalid && this.form.get('comentarios')?.touched"></i>
+            </span>
+            <input formControlName="comentarios" type="text" class="form-control" placeholder="Comentarios">
+        </div>
+    
+        <div class="input-group input-group-lg mb-3 mitad">
+            <span class="input-group-text">
+                <i class="fas fa-location-arrow"
+                [class.green-icon]="this.form.get('metodoDePago')?.valid"
+                [class.red-icon]="this.form.get('metodoDePago')?.invalid && this.form.get('metodoDePago')?.touched"></i>
+            </span>
+            <!--<input formControlName="metodoDePago" type="text" class="form-control" placeholder="Metodo De Pago">-->
+            <select id="metodoDePago" formControlName="metodoDePago">
+                <option *ngFor="let c of metodosDePago" [ngValue]="c.name">{{ c.name }}</option>
+            </select>
+        </div>
+    
+        <div class="d-grid gap-2 botonmitad">
+            <button type="submit" class="btn btn-success btn-lg">
+                <i class="fas fa-database"></i>&nbsp; Aceptar</button>
+        </div>
+</form>
+</div>
+
+<footer>
+    <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>

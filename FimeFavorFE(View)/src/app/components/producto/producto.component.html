@@ -1,0 +1,80 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <img src="/assets/img/FIME-FAVOR.png" width="125" height="125" class="left" routerLink="/seleccion">
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-4">
+            <p></p>
+            <p></p>
+            <input type="text" id="searchString" name="searchString" [(ngModel)]="searchText" 
+            class="form-control" placeholder="Buscar producto">
+            <p></p>
+            <button class="btn btn-primary alinear" type="button" (click)="search()"> Buscar </button>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <p></p>
+            <img src="/assets/img/mochila.png" width="70" height="70" routerLink="/mochila">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <p></p>
+            <img src="/assets/img/user.png" width="70" height="70" routerLink="/seleccion">
+        </div>
+    </div>
+<p></p>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/mercado">Productos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categorias</a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let categoria of categorias"><a class="dropdown-item" [routerLink]="['/mercado', categoria.id]">{{categoria.categoriaNombre}}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>-->
+      </ul>
+</div>
+<p></p>
+
+<h1 class="visible-xs">{{producto.nombre}}</h1>
+<div class="row product-details-container">
+    <div class="col-sm-6 product-images">
+        <img src={{producto.imagen}} width="500" height="500" />
+        <div class="key-label">PRODUCT IMAGES</div>
+    </div>
+    <div class="col-sm-6">
+        <h1 class="hidden-xs">{{producto.modelo}}</h1>
+        <div class="price-label">PRICE:</div>
+        <div class="price">$ {{producto.precio}}</div>
+        <div class="units">Only {{producto.existencia}} left.</div>
+        <div class="product-description" [textContent]="producto.descripcion">
+        </div>
+        <ul class="product-details">
+            <li>
+                <div class="key-label">MODEL NUMBER: {{producto.modelo}}</div>
+            </li>
+            <li>
+                <div class="key-label">CATEGORY:</div> <a [routerLink]="['/mercado', producto.categoriaId]">{{producto.categoriaNombre}}</a>
+            </li>
+        </ul>
+            <label for="qty">QUANTITY:</label>
+            <input type="text" name="qty" [(ngModel)]="cantidad" class="cart-quantity form-control" />
+            <button (click)="addToMochila()" class="btn btn-primary" routerLink="/mochila">Add to Mochila</button>
+        <a routerLink="/mercado">Back to List</a>
+    </div>
+</div>
+
+<footer>
+    <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>

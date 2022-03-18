@@ -1,0 +1,59 @@
+.mitad{
+    align-content: center;
+    text-align: center;
+}
+
+.botonmitad{
+    width: 50%;
+    text-align: center;
+    align-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.izquierda {
+    display: block;
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.alinear {
+    display: block;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.far {
+    cursor: pointer;
+    
+}
+
+.green-icon {
+    color: #198754
+}
+
+.red-icon {
+    color: #dc3545
+}
+
+.titulo {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.right {
+    margin-left: 82%;
+    margin-right: 0%;
+}
+
+.center{
+    margin-left: 44%;
+}
+.azul {
+    color: rgb(16, 16, 133);
+}
+.derecha {
+    margin-left: 95%;
+  }

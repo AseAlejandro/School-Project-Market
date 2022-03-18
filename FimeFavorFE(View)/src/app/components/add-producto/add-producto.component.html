@@ -1,0 +1,115 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <img src="/assets/img/FIME-FAVOR.png" width="125" height="125" class="left" routerLink="/seleccion">
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-4">
+            <p></p>
+            <p></p>
+            <input type="text" id="searchString" name="searchString" [(ngModel)]="searchText" 
+            class="form-control" placeholder="Buscar producto">
+            <p></p>
+            <button class="btn btn-primary alinear" type="button" (click)="search()"> Buscar </button>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2">
+            <p></p>
+            <img src="/assets/img/user.png" width="70" height="70" routerLink="/seleccion">
+        </div>
+    </div>
+<p></p>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/inicioVendedor">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/productosVendedor">Mis productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Añadir producto</a>
+        </li>
+      </ul>
+</div>
+<p></p>
+
+<p></p>
+<h3 class="titulo">Añadir producto</h3>
+<p></p>
+<p></p>
+<div class="alinear">
+<form [formGroup]="form" (ngSubmit)="guardarProducto()">
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-folder"
+            [class.green-icon]="this.form.get('nombre')?.valid"
+            [class.red-icon]="this.form.get('nombre')?.invalid && this.form.get('nombre')?.touched"></i>
+        </span>
+        <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre">
+    </div>
+
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-archive"
+            [class.green-icon]="this.form.get('modelo')?.valid"
+            [class.red-icon]="this.form.get('modelo')?.invalid && this.form.get('modelo')?.touched"></i>
+        </span>
+        <input formControlName="modelo" type="text" class="form-control" placeholder="Modelo">
+    </div>
+
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-info-circle"
+            [class.green-icon]="this.form.get('descripcion')?.valid"
+            [class.red-icon]="this.form.get('descripcion')?.invalid && this.form.get('descripcion')?.touched"></i>
+        </span>
+        <input formControlName="descripcion" type="text" class="form-control" placeholder="Descripcion">
+    </div>
+
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-location-arrow"
+            [class.green-icon]="this.form.get('categoriaId')?.valid"
+            [class.red-icon]="this.form.get('categoriaId')?.invalid && this.form.get('categoriaId')?.touched"></i>
+        </span>
+        <input formControlName="categoriaId" type="number" class="form-control" placeholder="Id Categoria">
+    </div>
+
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-registered"
+            [class.green-icon]="this.form.get('precio')?.valid"
+            [class.red-icon]="this.form.get('precio')?.invalid && this.form.get('precio')?.touched"></i>
+        </span>
+        <input formControlName="precio" type="number" class="form-control" placeholder="Precio">
+    </div>
+
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-envelope"
+            [class.green-icon]="this.form.get('existencia')?.valid"
+            [class.red-icon]="this.form.get('existencia')?.invalid && this.form.get('existencia')?.touched"></i>
+        </span>
+        <input formControlName="existencia" type="number" class="form-control" placeholder="Existencia">
+    </div>
+
+    <div class="input-group input-group-lg mb-3 mitad">
+        <span class="input-group-text">
+            <i class="fas fa-list-ol"
+            [class.green-icon]="this.form.get('vendedorId')?.valid"
+            [class.red-icon]="this.form.get('vendedorId')?.invalid && this.form.get('vendedorId')?.touched"></i>
+        </span>
+        <input formControlName="vendedorId" type="number" class="form-control" placeholder="Id vendedor">
+    </div>
+
+    <div class="d-grid gap-2 botonmitad">
+        <button type="submit" class="btn btn-success btn-lg">
+            <i class="fas fa-database"></i>&nbsp; Aceptar</button>
+    </div>
+</form>
+</div>
+<footer>
+    <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>

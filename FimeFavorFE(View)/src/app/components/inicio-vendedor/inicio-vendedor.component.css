@@ -1,0 +1,67 @@
+.mat-column-fecha {
+    font-size: 20px;
+  }
+
+  .mat-column-clienteId {
+    font-size: 20px;
+  }
+
+  .mat-column-repartidorId {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .mat-column-total{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .mat-table-sticky {
+    background: #2c76c0;
+    opacity: 1;
+    box-sizing: border-box;
+  }
+
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+
+  tr.example-detail-row {
+    height: 0;
+  }
+
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+
+  .example-element-description {
+    padding: 16px;
+  }
+
+  .form-control {
+    width: 20%;
+  }
+
+  .titulo {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.demo-table {
+    width: 95%;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .derecha {
+    margin-left: 95%;
+}

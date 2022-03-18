@@ -1,0 +1,12 @@
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\bin\Debug\net5.0\FIMEFavor.Models.deps.json
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\bin\Debug\net5.0\FIMEFavor.Models.dll
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\bin\Debug\net5.0\ref\FIMEFavor.Models.dll
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\bin\Debug\net5.0\FIMEFavor.Models.pdb
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.dll
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\ref\FIMEFavor.Models.dll
+C:\Users\Alejandro\Desktop\Facu\7mo\IG\Programa\FIMEFavor\FIMEFavor.Models\obj\Debug\net5.0\FIMEFavor.Models.pdb

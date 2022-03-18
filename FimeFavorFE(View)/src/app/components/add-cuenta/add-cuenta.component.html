@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+<div>
+<img src="/assets/img/FIME-FAVOR.png" width="150" height="150" class="left">
+<img src="/assets/img/FIME-FAVOR.png" width="150" height="150" class="right">
+</div>
+<h2 class="mitad">Creación de cuenta</h2>
+<p></p>
+<p></p>
+<div class="alinear">
+<form [formGroup]="form" (ngSubmit)="register()">
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-archive"
+            [class.green-icon]="this.form.get('matricula')?.valid"
+            [class.red-icon]="this.form.get('matricula')?.invalid && this.form.get('matricula')?.touched"></i>
+        </span>
+        <input formControlName="matricula" type="number" class="form-control" placeholder="Matricula">
+    </div>
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-user"
+            [class.green-icon]="this.form.get('nombre')?.valid"
+            [class.red-icon]="this.form.get('nombre')?.invalid && this.form.get('nombre')?.touched"></i>
+        </span>
+        <input formControlName="nombre" type="string" class="form-control" placeholder="Nombre">
+    </div>
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-at"
+            [class.green-icon]="this.form.get('correo')?.valid"
+            [class.red-icon]="this.form.get('correo')?.invalid && this.form.get('correo')?.touched"></i>
+        </span>
+        <input formControlName="correo" type="email" class="form-control" placeholder="Correo Electrónico">
+    </div>
+
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">
+            <i class="fas fa-key"
+            [class.green-icon]="this.form.get('contrasena')?.valid"
+            [class.red-icon]="this.form.get('contrasena')?.invalid && this.form.get('contrasena')?.touched"></i>
+        </span>
+        <input formControlName="contrasena" type="password" class="form-control" placeholder="Contraseña">
+    </div>
+
+
+    <div class="d-grid gap-2 botonmitad alinear">
+        <button type="submit" class="btn btn-success btn-lg">
+            <i class="fas fa-database"></i>&nbsp; Aceptar</button>
+    </div>
+</form>
+
+</div>
+
+<footer>
+    <img src="/assets/img/pregunta.png" width="65.625" height="35" class="derecha" routerLink="/preguntas">
+</footer>
+
+</body>
+
+
